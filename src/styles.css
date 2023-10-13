@@ -153,3 +153,59 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+/* Select Sport Styles */
+
+.headerSection{
+  display: flex;
+  flex-direction: column;
+  padding:20px;
+}
+
+.headerSection h1{
+  color: rgba(255, 255, 255, 0.80);
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-family: 'Michroma', sans-serif;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: capitalize;
+}
+
+.headerSection p{
+  color: rgba(255, 255, 255, 0.79);
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.headerSection span{
+font-weight: 576;
+font-style: italic;
+
+
+}
+
+.sportsGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-gap: 20px; /* Gap between grid items */
+  justify-content: center; /* Center the grid horizontally */
+}
+
+.sportItem{
+  width: 164px;
+  height: 167px;
+  flex-shrink: 0;/* Set a fixed height for grid items */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+border-top: 1px solid #FFF;
+background: radial-gradient(195.86% 200% at 123.78% -28.74%, #3141D1 0%, rgba(0, 0, 0, 0.29) 56.38%, rgba(0, 0, 0, 0.00) 85.94%), linear-gradient(180deg, rgba(50, 165, 211, 0.05) 40.53%, rgba(50, 165, 211, 0.05) 251.02%);
+box-shadow: 0px 0px 1px 0px rgba(84, 192, 160, 0.72) inset;
+}

@@ -90,18 +90,25 @@ export default function Home() {
       <SportsMenu onSelectSport={setSelectedSport} />
 
       {/* Section that displays Tinder-style Bet Cards */}
-
-      {data.map((eventData, index) => (
+      <div className='one'>
+        <div className='two'>
+        <div className="cardContainer">
+{data.map((eventData) => (
         <TinderCard
           className='swipe'
-          key={eventData[index]}
+          key={eventData.event}
           onCardLeftScreen={() => outOfFrame(eventData)}
           onSwipe={(dir) => swiped(dir, eventData)}
           preventSwipe={['up', 'down']}
         >
-          <BetCard key={index} event={eventData} />
+          <BetCard key={eventData.event} event={eventData} />
         </TinderCard>
       ))}
+</div>
+        </div>
+      </div>
+
+      
     </>
   );
 }
