@@ -4,13 +4,19 @@ import BetCard from '../components/BetCard';
 import TinderCard from 'react-tinder-card';
 import hasMoneyLine from '../utils/hasMoneyLine';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import WalletBalance from '../components/WalletBalance';
 
 //api connected test front end when i get home
 export default function Home() {
+  let title = "";
+  const { sport: routeSport } = useParams();
+  const [selectedSport, setSelectedSport] = useState(routeSport || 'soccer');
   const [data, setData] = useState([]);
-  const [selectedSport, setSelectedSport] = useState(null);
+
+  // const [data, setData] = useState([]);
+  // const [selectedSport, setSelectedSport] = useState(null);
 
   const fetchEvents = async (sport) => {
 
@@ -40,6 +46,15 @@ export default function Home() {
     }
   };
 
+   // useEffect(() => {
+  //   if (selectedSport) {
+  //     fetchEvents(selectedSport);
+  //   }
+  // }, [selectedSport]);
+
+     useEffect(() => {
+    fetchEvents(selectedSport);
+  }, [selectedSport]);
 
   //Tinder functions 
   const swiped = (direction, event) => {
@@ -58,22 +73,15 @@ export default function Home() {
       console.log((event.event) + ' left the screen!');
     };
 
-
-  // const fetchEvents = async (sport) => {
-  // try {
-  // const response = await axios.get("https://api.purebet.io/pbapi?sport=${sport}");
-  // setData(response.data);
-  // setData(response.data.baseball["Major League Baseball"].filter(event => event.moneyline));
-  // }catch (error) {
-  // console.error('Error in fetching data:', error)
+  
+  // const sportName = (selectedSport) => {
+    
+  //   if (selectedSport === "americanfootball") {
+  //     title = "American Football";
+  //   } else {
+  //     title = selectedSport
+  //   }
   // }
-
-  useEffect(() => {
-    if (selectedSport) {
-      fetchEvents(selectedSport);
-    }
-  }, [selectedSport]);
-
   return (
     <>
       <nav className="navbar">
@@ -88,7 +96,9 @@ export default function Home() {
 
       {/* Section that displays sport categories */}
       <SportsMenu onSelectSport={setSelectedSport} />
-
+      {/* <div className="sportheading">
+        <p>{sportName(selectedSport)}</p>
+</div> */}
       {/* Section that displays Tinder-style Bet Cards */}
       <div className='one'>
         <div className='two'>
@@ -104,9 +114,16 @@ export default function Home() {
           <BetCard key={eventData.event} event={eventData} />
         </TinderCard>
       ))}
-</div>
+          </div>
         </div>
       </div>
+
+           {/* <div className='buttons'>
+            <button className='swipeButton' onClick={() => swipe('right')}>swipe to bet</button>
+          
+      <button className='swipeButton' onClick={() => swipe('left')}>swipe to skip</button>
+      
+      </div> */}
 
       
     </>

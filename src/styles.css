@@ -1,6 +1,9 @@
 body {
-  max-width: 100vw;
-  overflow: hidden;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+
 }
 
 #root::-webkit-scrollbar {
@@ -182,19 +185,22 @@ font-weight: 400;
 line-height: normal;
 }
 
+
+
 .headerSection span{
-font-weight: 576;
+font-weight: bold;
 font-style: italic;
-
-
 }
 
+/* Mobile view */
 .sportsGrid{
   display: grid;
+  justify-items:center;
   grid-template-columns: 1fr 1fr; /* Two columns */
   grid-gap: 20px; /* Gap between grid items */
   justify-content: center; /* Center the grid horizontally */
 }
+
 
 .sportItem{
   width: 164px;
@@ -202,10 +208,58 @@ font-style: italic;
   flex-shrink: 0;/* Set a fixed height for grid items */
   color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
   border-radius: 24px;
 border-top: 1px solid #FFF;
 background: radial-gradient(195.86% 200% at 123.78% -28.74%, #3141D1 0%, rgba(0, 0, 0, 0.29) 56.38%, rgba(0, 0, 0, 0.00) 85.94%), linear-gradient(180deg, rgba(50, 165, 211, 0.05) 40.53%, rgba(50, 165, 211, 0.05) 251.02%);
 box-shadow: 0px 0px 1px 0px rgba(84, 192, 160, 0.72) inset;
+transition: all 0.3s ease;
+
 }
+
+
+.sportItem:hover {
+  background-color: #5c5b5b;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.sportIcon{
+  align-self: flex-start;
+  height: 100px;
+  width: 100px;
+
+}
+.sportName{
+  align-self: flex-end;
+  padding-right:10px;
+  margin-left: auto;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+/* Media query for bigger screens */
+@media (min-width: 650px) {
+
+  .headerSection {
+      text-align: center;
+    }
+
+.sportItem {
+  width: 300px;
+  height: 200px;
+}
+.sportsGrid{
+      grid-gap: 50px;
+      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 600px;
+}
+}
+

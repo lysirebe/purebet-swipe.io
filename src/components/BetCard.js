@@ -6,7 +6,7 @@ export default function BetCard({ event }) {
   const foundKey = hasMoneyLine(event);
   const homeOdds = event[foundKey].home.highestOdds;
   const awayOdds = event[foundKey].away.highestOdds;
-
+  // const eventId = event[foundkey].away.
 
   // time break the string into 2 substrings
 
@@ -15,27 +15,35 @@ export default function BetCard({ event }) {
       <div className="card">
         <div className="dateContainer">
           <p className="date">{date}</p>
-          {/* <p className="time">{date}</p> */}
         </div>
 
-        <div className="infoContainer">
-          <h4>{event.homeTeam}</h4>
+      <div className="infoContainer">
+        <p>{event.event}</p>
+          {/* <h4>{event.homeTeam}</h4>
           <p>vs</p>
 
-          <h4>{event.awayTeam}</h4>
+          <h4>{event.awayTeam}</h4> */}
         </div>
 
-        <div className="oddContainer">
-          <p>{homeOdds}</p>
-          <p>{awayOdds}</p>
+      <div className="oddContainer">
+        <p>Select your desired team:</p>
+          <button className='oddItem'>
+            <p>{event.homeTeam}</p>
+            <div className='odd'>{homeOdds}</div>
+        </button>
+        
+          <button className='oddItem'>
+            <p>{event.awayTeam}</p>
+            <div className='odd'>{awayOdds}</div>
+        </button>
         </div>
 
-        <div className="swipeContainer">
+        {/* <div className="swipeContainer">
           <div className="swipeBtnContainer">
             <button className="swipeButton">Skip Bet </button>
             <button className="swipeButton">Place Bet</button>
           </div>
-        </div>
+        </div> */}
       </div>
  
   );
