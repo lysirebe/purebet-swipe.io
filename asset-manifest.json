@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/purebet-swipe.io/static/css/main.6ef0b6bf.css",
-    "main.js": "/purebet-swipe.io/static/js/main.9569b3f9.js",
+    "main.js": "/purebet-swipe.io/static/js/main.8b59c6b2.js",
     "static/js/59.abf2b430.chunk.js": "/purebet-swipe.io/static/js/59.abf2b430.chunk.js",
     "index.html": "/purebet-swipe.io/index.html",
     "main.6ef0b6bf.css.map": "/purebet-swipe.io/static/css/main.6ef0b6bf.css.map",
-    "main.9569b3f9.js.map": "/purebet-swipe.io/static/js/main.9569b3f9.js.map",
+    "main.8b59c6b2.js.map": "/purebet-swipe.io/static/js/main.8b59c6b2.js.map",
     "59.abf2b430.chunk.js.map": "/purebet-swipe.io/static/js/59.abf2b430.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6ef0b6bf.css",
-    "static/js/main.9569b3f9.js"
+    "static/js/main.8b59c6b2.js"
   ]
 }
