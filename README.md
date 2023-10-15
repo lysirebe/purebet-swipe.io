@@ -3,7 +3,7 @@
 
 **Swipe** is a simplified sports betting experience, for casual bettors & mobile users😆
 
-Built using the **inhouse Purebet API**,  every bet is automatically routed to the on-chain sports betting protocol which has the best odds.
+Built using the **inhouse Purebet API**,  every bet is automatically routed to the on-chain sports betting protocol which has the best odds. Comapatible with any solana wallet 
 
 As with all bets via Purebet, this works across multiple blockchains, without the user having to bridge funds or swap collateral, including **BetDEX** offerings upon the **Monaco Protocol.**
 
