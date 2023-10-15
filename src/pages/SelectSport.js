@@ -75,30 +75,6 @@ icon.src = '../sports/americanfootball.png';
                 <p className="sportName">Esports</p>
              </Link>
 
-        {/* <div onClick={() => onSelectSport('soccer')} className="sportItem">
-            <img className="sportIcon" src="./public/img/sports/soccer.png" alt="Soccer"></img>
-            <p className="sportName">Soccer</p>
-        </div>
-
-        <div onClick={() => onSelectSport('combat')} className="sportItem">
-            <img className="sportIcon" src="./public/img/sports/combatsports.png" alt="Combat Sports"></img>
-            <p className="sportName">Combat Sports</p>
-        </div>
-
-        <div onClick= {() => onSelectSport('baseball')} className="sportItem">
-            <img className="sportIcon" src="./public/img/sports/baseball.png" alt="Baseball"></img>
-            <p className="sportName">Baseball</p>
-        </div>
-
-        <div onClick= {() => onSelectSport('basketball')}className="sportItem">
-            <img className="sportIcon" src="./public/img/sports/basketball.png" alt="Basketball"></img>
-            <p className="sportName">Basketball</p>
-        </div>
-
-        <div onClick= {() => onSelectSport('esports')} className="sportItem">
-            <img className="sportIcon" src="./public/img/sports/esports.png" alt="Esports"></img>
-            <p className="sportName">Esports</p>
-        </div> */}
     </div>
 
 </>
