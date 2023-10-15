@@ -39,7 +39,12 @@ useEffect(() => {
   return (
     <div className="balanceContainer">
       <p>Your Balance</p>
-      <h2>{usdcBalance}</h2>
-    </div>
+      <p>{usdcBalance} USDC</p>
+      </div>
+      
   );
 }
+{/* <p>{usdcBalance} USDC</p>
+      <p>{solBalance} SOL</p>
+      </div>
+    </div> */}

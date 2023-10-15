@@ -51,19 +51,22 @@ export default function BetCard({ event, onLocationSelect, onTeamSelect  }) {
         </div>
 
       <div className="oddContainer">
-        <p>Select your desired team:</p>
-        <button onClick={() => handleLocation(event.homeTeam, 'home')}
-          className='oddItem'>
+        <button 
+          onClick={() => handleLocation(event.homeTeam, 'home')}
+          className={`oddItem ${selectedLocation === 'home' ? 'selected' : ''}`}>
             <p>{event.homeTeam}</p>
             <div className='odd'>{homeOdds}</div>
         </button>
         
         <button
-           onClick={() => handleLocation(event.homeTeam, 'away')}
-          className='oddItem'>
+            onClick={() => handleLocation(event.awayTeam, 'away')}
+            className={`oddItem ${selectedLocation === 'away' ? 'selected' : ''}`}
+          >
             <p>{event.awayTeam}</p>
             <div className='odd'>{awayOdds}</div>
         </button>
+
+        <p className='selecttext'>Select your desired team then swipe </p>
         </div>
       </div>
  

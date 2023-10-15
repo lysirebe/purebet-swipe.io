@@ -1,30 +1,32 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const Modal = ({ isOpen, onClose, title, content }) => {
-  const [isOpenState, setIsOpenState] = useState(isOpen);
+const Modal = ({ open, title, text, confirmButtonText, onClose, onConfirm }) => {
+  if (!open) {
+    return null;
+  }
 
-  const handleClose = () => {
-    setIsOpenState(false);
-    onClose();
-  };
-
-  return (
-    <div className={`modal ${isOpenState ? 'open' : 'closed'}`}>
-      <div className="modal-content">
-        <h2>{title}</h2>
-        <p>{content}</p>
-        <button onClick={handleClose}>Close</button>
+  return ReactDOM.createPortal(
+    <div className="modal-overlay">
+      <div className="modal">
+        <div className="modal-header">
+          <h2>{title}</h2>
+          <button className="close-button" onClick={onClose}>
+            &times;
+          </button>
+        </div>
+        <div className="modal-content">
+          <p>{text}</p>
+        </div>
+        <div className="modal-footer">
+          <button className="confirm-button" onClick={onConfirm}>
+            {confirmButtonText}
+          </button>
+        </div>
       </div>
-    </div>
+    </div>,
+    document.getElementById('modal-root') // Ensure you have a div with id 'modal-root' in your index.html
   );
-};
-
-Modal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
 };
 
 export default Modal;

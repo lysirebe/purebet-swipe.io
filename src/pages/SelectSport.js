@@ -53,7 +53,7 @@ icon.src = '../sports/americanfootball.png';
                   className="sportItem"
               >
                 <img className="sportIcon" src='https://s3-alpha-sig.figma.com/img/80a4/6f02/cfbcf8edd74e3aa326e80669c17ee8f2?Expires=1698019200&Signature=MSrxpaDiH-Nz9zMfyE3ZLPXbQRPYdQtTI3UQIhy~rxIlQP1N93jakHGQQDmWHHwae8RMN4I7OXaJnxS4N7PKsJRgvRssMZcP6a937qlMeXzMYE4M-Q0QTVktCHa13jRueeLCu8TJWOKi6inGrnZRVGZZE2ajGMNzDeD9ozZ6rAP6JYmvc43qWoMmAdUdtw8NvshZoLHrWVA2pL78rdhC9aRkCs5XI5o7MkGFymocflWphGeAyw4K62ifjpGHs2mnfVF9T2SOq58I2r0C3gZY838FvcM1gi~oYRkulP6DY0YtFbWQtY2JNRJVjkm71Qqwm~HwWVST12OKMgC9XWRTqQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'></img>
-                <p className="sportName">Basketball</p>
+                <p className="sportName">Baseball</p>
               </Link>
               
               

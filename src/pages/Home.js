@@ -65,8 +65,16 @@ export default function Home() {
     // Check if foundKey and event[foundKey] are defined before accessing properties
     if (foundKey) {
       const selectedTeamOdds = event[foundKey][selectedLocation].highestOdds;
+      navigate(`/confirmbet`, {
+        state: {
+          chosenEvent: event,
+          selectedTeam,
+          selectedTeamOdds,
+          selectedLocation,
+        },
+      });
           //  setSelectedBet({ event, selectedTeam, selectedTeamOdds, selectedLocation });
-      navigate(`/confirmbet?event=${event.event}&team=${selectedTeam}&odds=${selectedTeamOdds}&location=${selectedLocation}`);
+      // navigate(`/confirmbet?event=${event}&eventName=${event.event}&team=${selectedTeam}&odds=${selectedTeamOdds}&location=${selectedLocation}`);
     } else {
       console.error('Invalid event or key');
       // Handle the error or show a message to the user
@@ -123,9 +131,9 @@ export default function Home() {
         </div>
       </div>
            <div className='buttons'>
-            <div className='swipeButton' >swipe to bet</div>
+            <div className='swipeButton' >SWIPE RIGHT TO BET</div>
           
-      <div className='swipeButton'>swipe to skip</div>
+      <div className='swipeButton'>SWIPE LEFT TO SKIP</div>
       
       </div>
 
