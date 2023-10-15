@@ -8,6 +8,10 @@ Built using the **inhouse Purebet API**,  every bet is automatically routed to t
 As with all bets via Purebet, this works across multiple blockchains, without the user having to bridge funds or swap collateral, including **BetDEX** offerings upon the **Monaco Protocol.**
 
 ### Introducing our new and improved UI 🥳
-![enter image description here](https://s3-alpha-sig.figma.com/img/0e5d/e76a/b52a956421f3bb94e904b72514f56323?Expires=1698019200&Signature=Y43NWRNKWK5KZSu0BNTVxkMAfA9nlDZ81clIU0SKIIDneMzltfikM5OE48MysBcF71Ytb41qVjg9Uf2d6FjLiIMotcACrxYYM256eRMBoTqHN4aGZazvX5joAu1KcpyHwWMdgNOxYvUw7NPPoWb6xHjS1YFbZugFghaxwlEdnTx-T~UJrNqST1BpTxsGNKAwdBNnIkf1bin7s7so3oEU8p64o~gslQx5NrhPWg6u3ycBII~Ze719jeuSO3WCTmV-3jb45yh6tZ1abrhYyu2nNT9VpgoBSPflPObmH3ZqdtEFg29YsGAywJYtoM4pUbxGeChmA63qFDukknZN12FyAg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4)
 
+<img width="499" alt="Screenshot 2023-10-15 at 21 48 18" src="https://github.com/lysirebe/purebet-swipe.io/assets/113626927/532fe234-6a53-4ae0-8fbd-d41b36ab2b1b">
 
+![Screenshot 2023-10-15 at 21 37 2](https://github.com/lysirebe/purebet-swipe.io/assets/113626927/feef56a0-8d42-4249-be3d-385d38823d56)
+![Screenshot 2023-10-15 at 21 34 1](https://github.com/lysirebe/purebet-swipe.io/assets/113626927/7f91f693-d3c2-460b-a901-f292f49d9e6a)
+![Screenshot 2023-10-15 at 21 37 2](https://github.com/lysirebe/purebet-swipe.io/assets/113626927/969de004-c24e-43fe-8a7e-a567514d7456)
+![Screenshot 2023-10-15 at 21 35 1](https://github.com/lysirebe/purebet-swipe.io/assets/113626927/4b46e8a5-f561-4513-b2a6-120d62902da3)
