@@ -18,7 +18,7 @@ const AppRoutes = () => {
 
     <Router>
       <Routes>
-      < Route path="/" element={<Welcome />} />
+      < Route path="/purebet-swipe.io" element={<Welcome />} />
         <Route path="/selectsport" element={<SelectSport />} />
         <Route path="/home/:sport" element={<Home />} />
         <Route path="/confirmbet" element={<ConfirmBet />} />

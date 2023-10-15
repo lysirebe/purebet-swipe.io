@@ -4,7 +4,7 @@ import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import WalletBalance from '../components/WalletBalance';
 import { useWallet, useConnection } from '@solana/wallet-adapter-react';
 import axios from 'axios'
-import Modal from '../components/Modal';
+import Modal from '../components/modal';
 
 export default function ConfirmBet() {
   const location = useLocation();
@@ -178,7 +178,7 @@ return (
     <>
       <nav className="navbar">
         <a href="https://exchange.purebet.io">
-        <img src="https://exchange.purebet.io/img/logo_dark.png"></img>
+        <img src="https://exchange.purebet.io/img/logo_dark.png" alt="Description"/>
         </a>
         <WalletMultiButton className="wallet" />
       </nav>

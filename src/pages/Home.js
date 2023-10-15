@@ -94,7 +94,7 @@ export default function Home() {
     <>
       <nav className="navbar">
         <a href="https://exchange.purebet.io">
-          <img src="https://exchange.purebet.io/img/logo_dark.png"></img>
+          <img src="https://exchange.purebet.io/img/logo_dark.png" alt="Description"/>
         </a>
         <WalletMultiButton className="wallet" />
       </nav>
