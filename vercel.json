@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/purebet-swipe.io/static/:path*", "destination": "/purebet-swipe.io/static/:path*" },
+    { "source": "/purebet-swipe.io/:path*", "destination": "/purebet-swipe.io/index.html" }
+  ]
+}

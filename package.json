@@ -1,5 +1,7 @@
 {
 
+  "homepage": "https://lysirebe.github.io/purebet-swipe.io",
+
   "name": "react-mui-pro-starter",
 
   "version": "0.8.35",
@@ -144,7 +146,7 @@
  
   "scripts": { 
     "start": "react-app-rewired start", 
-    "build": "react-app-rewired build", 
+    "build": "PUBLIC_URL=/purebet-swipe.io react-app-rewired build", 
     "test": "react-app-rewired test", 
     "eject": "react-scripts eject" ,
     "predeploy": "npm run build",
