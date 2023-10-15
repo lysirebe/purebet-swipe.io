@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.6ef0b6bf.css",
-    "main.js": "/static/js/main.14619216.js",
-    "static/js/59.abf2b430.chunk.js": "/static/js/59.abf2b430.chunk.js",
-    "index.html": "/index.html",
-    "main.6ef0b6bf.css.map": "/static/css/main.6ef0b6bf.css.map",
-    "main.14619216.js.map": "/static/js/main.14619216.js.map",
-    "59.abf2b430.chunk.js.map": "/static/js/59.abf2b430.chunk.js.map"
+    "main.css": "/purebet-swipe.io/static/css/main.6ef0b6bf.css",
+    "main.js": "/purebet-swipe.io/static/js/main.f95698d3.js",
+    "static/js/59.abf2b430.chunk.js": "/purebet-swipe.io/static/js/59.abf2b430.chunk.js",
+    "index.html": "/purebet-swipe.io/index.html",
+    "main.6ef0b6bf.css.map": "/purebet-swipe.io/static/css/main.6ef0b6bf.css.map",
+    "main.f95698d3.js.map": "/purebet-swipe.io/static/js/main.f95698d3.js.map",
+    "59.abf2b430.chunk.js.map": "/purebet-swipe.io/static/js/59.abf2b430.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6ef0b6bf.css",
-    "static/js/main.14619216.js"
+    "static/js/main.f95698d3.js"
   ]
 }
