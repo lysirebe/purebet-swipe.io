@@ -4,18 +4,18 @@ import BetCard from '../components/BetCard';
 import TinderCard from 'react-tinder-card';
 import hasMoneyLine from '../utils/hasMoneyLine';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import WalletBalance from '../components/WalletBalance';
 
-//api connected test front end when i get home
+
 export default function Home() {
-  let title = "";
   const { sport: routeSport } = useParams();
   const [selectedSport, setSelectedSport] = useState(routeSport || 'soccer');
   const [data, setData] = useState([]);
-
-  // const [data, setData] = useState([]);
+  const [selectedLocation, setSelectedLocation] = useState(null);  const navigate = useNavigate();
+  const [selectedTeam, setSelectedTeam] = useState(null);
+  // const [selectedBet, setSelectedBet] = useState(null);;
   // const [selectedSport, setSelectedSport] = useState(null);
 
   const fetchEvents = async (sport) => {
@@ -46,42 +46,43 @@ export default function Home() {
     }
   };
 
-   // useEffect(() => {
-  //   if (selectedSport) {
-  //     fetchEvents(selectedSport);
-  //   }
-  // }, [selectedSport]);
 
      useEffect(() => {
     fetchEvents(selectedSport);
   }, [selectedSport]);
 
-  //Tinder functions 
+  //Tinder functions
+
+  // console.log(selectedTeam)
+  //   console.log(selectedLocation)
+
+  
   const swiped = (direction, event) => {
-    console.log('removing: ' + (event.event) + ' from: ' + direction);
+  if (direction === 'right') {
+    const foundKey = hasMoneyLine(event);
+    console.log("swiped func", foundKey)
 
-    //link to new page, send to this page the event chosen 
+    // Check if foundKey and event[foundKey] are defined before accessing properties
+    if (foundKey) {
+      const selectedTeamOdds = event[foundKey][selectedLocation].highestOdds;
+          //  setSelectedBet({ event, selectedTeam, selectedTeamOdds, selectedLocation });
+      navigate(`/confirmbet?event=${event.event}&team=${selectedTeam}&odds=${selectedTeamOdds}&location=${selectedLocation}`);
+    } else {
+      console.error('Invalid event or key');
+      // Handle the error or show a message to the user
+    }
+  }
+};
 
-    // let eventId = getPurebetId(event);
 
-    // if (direction === 'right' && eventId != eventToBet) {
-    //   setTimeout(() => setEventToBet(eventId), 100);
-    // }
-  };
+
 
   	const outOfFrame = (event) => {
       console.log((event.event) + ' left the screen!');
     };
 
   
-  // const sportName = (selectedSport) => {
-    
-  //   if (selectedSport === "americanfootball") {
-  //     title = "American Football";
-  //   } else {
-  //     title = selectedSport
-  //   }
-  // }
+
   return (
     <>
       <nav className="navbar">
@@ -111,19 +112,22 @@ export default function Home() {
           onSwipe={(dir) => swiped(dir, eventData)}
           preventSwipe={['up', 'down']}
         >
-          <BetCard key={eventData.event} event={eventData} />
+    <BetCard
+              event={eventData}
+              onLocationSelect={setSelectedLocation}
+              onTeamSelect={setSelectedTeam}
+            />
         </TinderCard>
       ))}
           </div>
         </div>
       </div>
-
-           {/* <div className='buttons'>
-            <button className='swipeButton' onClick={() => swipe('right')}>swipe to bet</button>
+           <div className='buttons'>
+            <div className='swipeButton' >swipe to bet</div>
           
-      <button className='swipeButton' onClick={() => swipe('left')}>swipe to skip</button>
+      <div className='swipeButton'>swipe to skip</div>
       
-      </div> */}
+      </div>
 
       
     </>

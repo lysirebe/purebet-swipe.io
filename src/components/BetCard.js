@@ -1,14 +1,39 @@
-import React from 'react';
-import hasMoneyLine from '../utils/hasMoneyLine';
 
-export default function BetCard({ event }) {
+import hasMoneyLine from '../utils/hasMoneyLine';
+import React, { useState, useEffect } from 'react';
+
+export default function BetCard({ event, onLocationSelect, onTeamSelect  }) {
+
+
+  const [selectedTeam, setSelectedTeam] = useState(null);
+  
+  const [selectedLocation, setSelectedLocation] = useState(null);
+
+// const handleTeamSelect = (team) => {
+//   console.log('Selected Team:', team);
+//   setSelectedTeam(team);
+// };
+
+
+  const handleLocation = (team, location) => {
+    console.log('Selected Team:', team, location);
+    setSelectedTeam(team);
+    setSelectedLocation(location);
+    onTeamSelect(team);
+    onLocationSelect(location);
+  };
+
+   useEffect(() => {
+     console.log('Selected Location:', selectedLocation);
+    console.log('Selected Team:', selectedTeam);
+  }, [selectedLocation, selectedTeam]);
+
+
   let date = new Date(event.startDate * 1000).toLocaleString();
   const foundKey = hasMoneyLine(event);
   const homeOdds = event[foundKey].home.highestOdds;
   const awayOdds = event[foundKey].away.highestOdds;
-  // const eventId = event[foundkey].away.
 
-  // time break the string into 2 substrings
 
   return (
 
@@ -27,33 +52,20 @@ export default function BetCard({ event }) {
 
       <div className="oddContainer">
         <p>Select your desired team:</p>
-          <button className='oddItem'>
+        <button onClick={() => handleLocation(event.homeTeam, 'home')}
+          className='oddItem'>
             <p>{event.homeTeam}</p>
             <div className='odd'>{homeOdds}</div>
         </button>
         
-          <button className='oddItem'>
+        <button
+           onClick={() => handleLocation(event.homeTeam, 'away')}
+          className='oddItem'>
             <p>{event.awayTeam}</p>
             <div className='odd'>{awayOdds}</div>
         </button>
         </div>
-
-        {/* <div className="swipeContainer">
-          <div className="swipeBtnContainer">
-            <button className="swipeButton">Skip Bet </button>
-            <button className="swipeButton">Place Bet</button>
-          </div>
-        </div> */}
       </div>
  
   );
 }
-
-
-
-            /* // how to include return value in the below response */
-
-            /* <p>{event.${foundKey}.home.highestOdds}</p> */
-            /* <p>{event.moneyline.home.highestOdds}</p>
-
-          <p>{event.moneyline.away.highestOdds}</p> */
