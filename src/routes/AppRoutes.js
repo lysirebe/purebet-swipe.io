@@ -7,7 +7,7 @@ import Welcome from '../pages/Welcome';
 
 const AppRoutes = () => {
   return (
-    <Router basename="/purebet-swipe.io">
+    <Router>
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/selectsport" element={<SelectSport />} />

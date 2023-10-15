@@ -130,9 +130,10 @@ export default function Home() {
         </div>
       </div>
            <div className='buttons'>
-            <div className='swipeButton' >SWIPE RIGHT TO BET</div>
+
           
       <div className='swipeButton'>SWIPE LEFT TO SKIP</div>
+      <div className='swipeButton' >SWIPE RIGHT TO BET</div>
       
       </div>
 
