@@ -4,7 +4,7 @@ import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import WalletBalance from '../components/WalletBalance';
 import { useWallet, useConnection } from '@solana/wallet-adapter-react';
 import axios from 'axios'
-import Modal from '../components/modal';
+import Modal from '../components/Modal';
 
 export default function ConfirmBet() {
   const location = useLocation();
