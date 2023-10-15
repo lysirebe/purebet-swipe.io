@@ -1,37 +1,13 @@
-# Follow the project structure and pattern React + Material UI Professional starter
+# Swipe By Purebet
+> *Your perfect bet is just a **swipe** away*
 
-- https://github.com/karpolan/react-mui-pro-starter
+**Swipe** is a simplified sports betting experience, for casual bettors & mobile users😆
 
+Built using the **inhouse Purebet API**,  every bet is automatically routed to the on-chain sports betting protocol which has the best odds.
 
+As with all bets via Purebet, this works across multiple blockchains, without the user having to bridge funds or swap collateral, including **BetDEX** offerings upon the **Monaco Protocol.**
 
-To run the project locally, cd to project directory,
-
-- rename `.env_sample` as `.env`, to place real bet, set the REACT_APP_PLACE_REAL_BET=true
-
-- `npm ci`
-
-- for newer node.js version, add the line
-
-    'fallback: { "crypto": require.resolve("crypto-browserify"), "stream": require.resolve("stream-browserify") },'
-
-    to the resolve section in webpack.config.js file so it looks like:
-
-    ......
-    resolve: {
-        // This allows you to set a fallback for where webpack should look for modules.
-        .......
-        plugins: [
-            // Prevents users from importing files from outside of src/ (or node_modules/).
-            .....
-            new ModuleScopePlugin(paths.appSrc, [
-            paths.appPackageJson,
-            .....
-            babelRuntimeRegenerator,
-            ]),
-        ],
-        fallback: { "crypto": require.resolve("crypto-browserify"), "stream": require.resolve("stream-browserify") },
-        },
-
-- `npm start` or `npm run dev`
+### Introducing our new and improved UI 🥳
+![enter image description here](https://s3-alpha-sig.figma.com/img/0e5d/e76a/b52a956421f3bb94e904b72514f56323?Expires=1698019200&Signature=Y43NWRNKWK5KZSu0BNTVxkMAfA9nlDZ81clIU0SKIIDneMzltfikM5OE48MysBcF71Ytb41qVjg9Uf2d6FjLiIMotcACrxYYM256eRMBoTqHN4aGZazvX5joAu1KcpyHwWMdgNOxYvUw7NPPoWb6xHjS1YFbZugFghaxwlEdnTx-T~UJrNqST1BpTxsGNKAwdBNnIkf1bin7s7so3oEU8p64o~gslQx5NrhPWg6u3ycBII~Ze719jeuSO3WCTmV-3jb45yh6tZ1abrhYyu2nNT9VpgoBSPflPObmH3ZqdtEFg29YsGAywJYtoM4pUbxGeChmA63qFDukknZN12FyAg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4)
 
 
