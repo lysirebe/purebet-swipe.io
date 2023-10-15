@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom"
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-
-export default function Welcome({ }) {
+export default function Welcome() {
 
   return (
 <>
