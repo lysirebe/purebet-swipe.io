@@ -88,14 +88,13 @@ export default function Home() {
   	const outOfFrame = (event) => {
       console.log((event.event) + ' left the screen!');
     };
-
   
 
   return (
     <>
       <nav className="navbar">
         <a href="https://exchange.purebet.io">
-          <img src="/img/logo_dark.png"></img>
+          <img src="https://exchange.purebet.io/img/logo_dark.png"></img>
         </a>
         <WalletMultiButton className="wallet" />
       </nav>

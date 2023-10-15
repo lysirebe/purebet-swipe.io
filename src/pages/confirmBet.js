@@ -114,12 +114,12 @@ placeBet(
         onClose: () => {
           setBetDialog({ modal: null });
           // Redirect to the sport select page
-          navigate('/SelectSport');
+          navigate(`/home/${chosenEvent.sport}`)
         },
         onConfirm: () => {
           setBetDialog({ modal: null });
           // Redirect to the sport select page
-          navigate('/SelectSport');
+          navigate(`/home/${chosenEvent.sport}`)
         },
       },
     });
@@ -178,7 +178,7 @@ return (
     <>
       <nav className="navbar">
         <a href="https://exchange.purebet.io">
-          <img src="/img/logo_dark.png"></img>
+        <img src="https://exchange.purebet.io/img/logo_dark.png"></img>
         </a>
         <WalletMultiButton className="wallet" />
       </nav>
@@ -200,7 +200,7 @@ return (
 </svg> */}
         <p className='bettitle'>BET SLIP</p>
         <div className="stakeContainer">
-          <p>Enter Stake Amount</p>
+          <p>Enter Stake Amount(USDC)</p>
           <div className='inputContainer'>
             <input
              type="number"
