@@ -4,10 +4,10 @@ import { Link } from "react-router-dom"
 
 export default function SelectSport({ onSelectSport }) {
     // Create a new Image object
-var icon = new Image();
+// var icon = new Image();
 
-// Set the image source
-icon.src = '../sports/americanfootball.png';
+// // Set the image source
+// icon.src = '../sports/americanfootball.png';
 
 
  const handleSportSelection = (sport) => {
@@ -26,7 +26,7 @@ icon.src = '../sports/americanfootball.png';
                   onClick={() => handleSportSelection('americanfootball')}
                   className="sportItem"
               >
-                <img className="sportIcon" src='https://s3-alpha-sig.figma.com/img/15e4/5d15/490cbdc4bf0c65f847f3ee613ea17c56?Expires=1698019200&Signature=oPLnJWN4OI3Vk4Ad3GJC7VJ6K0N3hoO6dPGdLn1rzV5vGb0zKCVKaciq6sV1xHIa8wbumpevTOva4GQDh-NMG3pwGpKdkI2uyLAyJSW1yH8ufWgjpYE~0C9j-c-IdBxhElHsf8pQF38BTKAhfJyBaH29jAaH~~kLTDuBfKUcQrYr6w1B96ZcxHJlD6RKvix-OgVy9NEhGhBjLqqVzKwIzmZYjYOfeAnOn6oH97v5UlwgQ8eda0QfSYZrJbDAyQHGVWEhE66gPMCPK85DHAZ4L4oy~LlG5lY0Bbz-GzOnEjC8yVboC1LPS7WLvXUIzwZ6h4C1Dv-bVBVlC2ewcMiWpA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'/>
+                <img className="sportIcon" src='sports/americanfootball.png'/>
                 <p className="sportName">American Football</p>
               </Link>
               
@@ -34,7 +34,7 @@ icon.src = '../sports/americanfootball.png';
                   onClick={() => handleSportSelection('soccer')}
                   className="sportItem"
               >
-                <img className="sportIcon" src="https://s3-alpha-sig.figma.com/img/96d7/e1d7/881777c38d7e6d11f01afc44b3bfb2d6?Expires=1698019200&Signature=SHNgFJybaHimZzdAoxQ3wyCRV5HceVLq2uipiuxqmYtMLoI62NkcJOIpux2FWhqiOnrZ26hOyl6ww0w6c~kYUvcWHtl4CkphAyumGgP-ZFeOekB8IGNKnHy2eGF3nBTmWcPWIiS45sRBse26MrFTHk9hNWO~91jCD4eb9XsD7j7IQaEkldFnzUZvK2nG91LhXbFjPWgFlmDaPx748bq5wDY19ima0e6Wl3Jzi9sH~ArY4nhsSiwaQrEBIeP6HbTh6ybeFuEKsZrk3HY6L~LQ~EuHCT6LDeaPHZ0i7Yvoq9g58yZQWjsARdhdgqmvMgWqgjtYhRTpyzN3CHxL~Mddmg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
+                <img className="sportIcon" src='sports/soccer.png'/>
                 <p className="sportName">Soccer</p>
               </Link>
               
