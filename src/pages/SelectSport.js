@@ -26,7 +26,9 @@ export default function SelectSport({ onSelectSport }) {
                   onClick={() => handleSportSelection('americanfootball')}
                   className="sportItem"
               >
-                <img className="sportIcon" src='sports/americanfootball.png'/>
+
+                
+                <img className="sportIcon" src='/sports/americanfootball.png'/>
                 <p className="sportName">American Football</p>
               </Link>
               
@@ -34,7 +36,7 @@ export default function SelectSport({ onSelectSport }) {
                   onClick={() => handleSportSelection('soccer')}
                   className="sportItem"
               >
-                <img className="sportIcon" src='sports/soccer.png'/>
+                <img className="sportIcon" src='/sports/soccer.png'/>
                 <p className="sportName">Soccer</p>
               </Link>
               
